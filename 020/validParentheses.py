@@ -1,14 +1,12 @@
 class Solution:
     def isValid(self, s: str) -> bool:
-        left_parenthesis  = ["(", "{", "["]
-        right_parenthesis = [")", "}", "]"]
         parenthesis_map   = {"(": ")", "{": "}", "[": "]"}
         stack = []
 
         for parenthesis in s:
-            if parenthesis in left_parenthesis:
+            if parenthesis in parenthesis_map.keys():
                 stack.append(parenthesis_map[parenthesis])
-            elif parenthesis in right_parenthesis:
+            elif parenthesis in parenthesis_map.values():
                 if parenthesis != stack.pop():
                     return False
         return True
