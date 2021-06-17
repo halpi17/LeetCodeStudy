@@ -10,9 +10,7 @@ class Solution:
             if parenthesis in parenthesis_map.keys():
                 stack.append(parenthesis_map[parenthesis])
             elif parenthesis in parenthesis_map.values():
-                if not stack:
-                    return False
-                if parenthesis != stack.pop():
+                if not stack or parenthesis != stack.pop():
                     return False
         if stack:
             return False
