@@ -19,6 +19,7 @@ class Solution:
         # 1 line Solutin
         # return bin(int(a, base = 2) + int(b, base = 2))[2:]
         # return format(int(a, base = 2) + int(b, base = 2), 'b')
+        # return f"{int(a, base = 2) + int(b, base = 2):b}"
 
 
 def main():
