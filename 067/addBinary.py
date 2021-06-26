@@ -17,8 +17,8 @@ class Solution:
         return result
 
         # 1 line Solutin
-        # return bin(int(a, 2) + int(b, 2))[2:]
-        # return format(int(a, 2) + int(b, 2), 'b')
+        # return bin(int(a, base = 2) + int(b, base = 2))[2:]
+        # return format(int(a, base = 2) + int(b, base = 2), 'b')
 
 
 def main():
