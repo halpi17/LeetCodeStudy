@@ -1,10 +1,15 @@
 class Solution:
     def mySqrt(self, x: int) -> int:
         root = 0
+        head, tail = 0, x
         while(1):
+            root = (head + tail) // 2
             if x >= root ** 2 and x < (root + 1) ** 2:
                 return root
-            root += 1
+            elif x >= root ** 2:
+                head = root + 1
+            elif x < (root + 1) ** 2:
+                tail = root - 1
 
 
 def main():
